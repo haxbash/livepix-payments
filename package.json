@@ -15,7 +15,6 @@
   },
   "imports": {
     "#root/*": "./src/*",
-    "#payment": "./src/payment/index.js",
-    "#lib": "./src/lib/index.js"
+    "#payment": "./src/payment/index.js"
   }
 }

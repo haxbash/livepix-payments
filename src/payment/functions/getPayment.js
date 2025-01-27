@@ -8,7 +8,7 @@ export async function getUrlPayment(price, token) {
     const paymentResponse = await axios.post('https://api.livepix.gg/v2/payments', {
       amount: amountCents,
       currency: 'BRL',
-      redirectUrl: "https://googel.com"
+      redirectUrl: "https://google.com"
     }, {
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -43,7 +43,7 @@ export async function getDataPayment(price, token) {
 
     const paymentUrl = paymentResponse.data.data.redirectUrl;
 
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
     await page.goto(paymentUrl);
 
@@ -67,7 +67,7 @@ export async function getDataPayment(price, token) {
     };
 
   } catch (error) {
-    console.error('Erro ao gerar o link de pagamento:', error.response ? error.response.data : error.message);
+    console.error('Erro ao gerar o pagamento:', error.response ? error.response.data : error.message);
     return null;
   }
 }
