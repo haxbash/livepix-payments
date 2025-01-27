@@ -1,7 +1,5 @@
 # Livepix@Payments
 
-Este guia detalha como usar e executar o projeto Livepix@Payments para integrar pagamentos via Pix. Ele cobre desde a configuração inicial até a utilização das principais funcionalidades.
-
 ## Pré-requisitos
 
 Antes de começar, você precisará:
