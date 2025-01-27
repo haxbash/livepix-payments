@@ -41,9 +41,6 @@ Para iniciar o projeto, execute o comando:
 ```bash
 node .
 ```
-
-Isso irá iniciar o servidor e deixá-lo pronto para gerar pagamentos.
-
 ---
 
 ## Como Usar?
