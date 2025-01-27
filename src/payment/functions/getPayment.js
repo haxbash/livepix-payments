@@ -8,6 +8,7 @@ export async function getUrlPayment(price, token) {
     const paymentResponse = await axios.post('https://api.livepix.gg/v2/payments', {
       amount: amountCents,
       currency: 'BRL',
+      redirectUrl: "https://googel.com"
     }, {
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -31,10 +32,12 @@ export async function getDataPayment(price, token) {
     const paymentResponse = await axios.post('https://api.livepix.gg/v2/payments', {
       amount: amountCents,
       currency: 'BRL',
+      redirectUrl: "https://google.com"
     }, {
       headers: {
         'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+
       }
     });
 
@@ -59,7 +62,6 @@ export async function getDataPayment(price, token) {
 
     return {
       urlPayment: paymentUrl,
-      paymentValue: price,
       qrCode: qrCodeBuffer,
       pixCode: pixCode.trim()
     };
@@ -67,8 +69,6 @@ export async function getDataPayment(price, token) {
   } catch (error) {
     console.error('Erro ao gerar o link de pagamento:', error.response ? error.response.data : error.message);
     return null;
-  } finally {
-    await browser.close();
   }
 }
 

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+      "paths": {
+          "#root/*": ["./root/*"],
+          "#lib": ["./src/lib/index.js"],
+          "#payment": ["./src/payment/index.js"],
+      }
+  }
+}
