@@ -13,7 +13,7 @@ Antes de começar, você precisará:
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/livepix-payments.git
+https://github.com/haxbash/livepix-payments.git
 ```
 
 ### 2. Instalar as Dependências
